@@ -4,6 +4,8 @@ let balls = [];
 //create a variable to hold your avatar
 let me;
 
+let m = 0;
+
 function preload(){
   img = loadImage('lorenzodavisshotgun.png');
   img2 = loadImage('lorenzodavisenergyrifle.png');
@@ -16,23 +18,8 @@ function setup() {
   me = new Avatar(width/2, 300, 3);
 }
 
-function ar(){
-
-}
-
-function sniper(){
-
-}
-
-function shotgun(){
-
-}
-
-function pistol(){
-
-}
-
 function weapons(){
+
   noFill();
   push();
   weaponbox();
@@ -53,6 +40,12 @@ function weapons(){
   weaponbox();
   pop();
 
+
+}
+
+function coverbox(){
+  if keyPressed(49);
+  rect(100, 100, 100, 100);
 }
 
 function weaponbox(){
@@ -67,6 +60,12 @@ function draw(){
   image(img2, 1300, 700, 70, 70);
   image(img3, 1200, 700, 70, 70);
   image(img4, 1100, 700, 70, 70);
+  textSize(32);
+  text(("4"), 1430, 670);
+  text(("3"), 1330, 670);
+  text(("2"), 1230, 670);
+  text(("1"), 1130, 670);
+  coverbox();
   me.drawMe();
   me.moveMe();
 
