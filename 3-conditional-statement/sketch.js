@@ -6,6 +6,8 @@ let me;
 
 let m = 0;
 
+let boxfill = 0;
+
 function preload(){
   img = loadImage('lorenzodavisshotgun.png');
   img2 = loadImage('lorenzodavisenergyrifle.png');
@@ -18,43 +20,24 @@ function setup() {
   me = new Avatar(width/2, 300, 3);
 }
 
-function weapons(){
-
-  noFill();
-  push();
-  weaponbox();
-  pop();
-
-  push();
-  translate(-100,0);
-  weaponbox();
-  pop();
-
-  push();
-  translate(-200,0);
-  weaponbox();
-  pop();
-
-  push();
-  translate(-300,0);
-  weaponbox();
-  pop();
-
-
-}
-
-function coverbox(){
-  if keyPressed(49);
-  rect(100, 100, 100, 100);
-}
-
-function weaponbox(){
-  strokeWeight(10);
-  rect(1390, 690, 100, 100);
+function keyPressed(){
+  if (keyCode === 1);{
+    let boxfill = 1;
+  }
+  else if (keyCode === 2) {
+    let boxfill = 2;
+  }
+  else if (keyCode === 3) {
+    let boxfill = 3;
+  }
+  else if (keyCode === 4) {
+    let boxfill = 4;
+  }
 }
 
 function draw(){
 	background(220);
+  keyPressed();
   weapons();
   image(img, 1400, 700, 70, 70);
   image(img2, 1300, 700, 70, 70);
@@ -65,10 +48,78 @@ function draw(){
   text(("3"), 1330, 670);
   text(("2"), 1230, 670);
   text(("1"), 1130, 670);
-  coverbox();
   me.drawMe();
   me.moveMe();
 
+}
+
+function weapons(){
+
+  push();
+  if (boxfill==1){
+    let m = 1000
+    weaponbox();
+    pop();
+  }
+
+  else{
+    push();
+    weaponbox();
+    pop();
+  }
+
+  push();
+  translate(-100,0);
+  if (boxfill = 2){
+    let m = 1000
+    weaponbox();
+    pop();
+  }
+
+  else{
+    push();
+    translate(-100,0);
+    weaponbox();
+    pop();
+  }
+
+  push();
+  if (boxfill==3){
+    translate(-200,0);
+    let m = 1000
+    weaponbox();
+    pop();
+  }
+
+  else{
+    push();
+    translate(-200,0);
+    weaponbox();
+    pop();
+  }
+
+  push();
+  if (boxfill ==4){
+    translate(-300,0);
+    weaponbox();
+    pop();
+  }
+
+  else{
+    push();
+    translate(-400,0);
+    weaponbox();
+    pop();
+  }
+
+}
+
+
+function weaponbox(){
+  strokeWeight(10);
+  rect(1390, 690, 100, 100);
+  fill(11, 36, 251, m);
+  rect(1390, 690, 100, 100);
 }
 //avatar class
 class Avatar {
