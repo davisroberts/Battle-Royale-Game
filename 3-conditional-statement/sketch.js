@@ -1,6 +1,8 @@
 //create an empty array called balls
 let balls = [];
 
+let health;
+
 //create a variable to hold your avatar
 let me;
 
@@ -127,6 +129,8 @@ function weaponbox(){
 }
 //avatar class
 class Avatar {
+
+  health = 100;
 
 	constructor(x,y, speed){ //every avatar needs an x value, a y value, and a speed
 		    this.x = x;
