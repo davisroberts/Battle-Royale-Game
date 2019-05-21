@@ -61,7 +61,7 @@ function weapons(){
 
   push();
   if (boxfill==1){
-    //m = 1000
+    m = 1000
     weaponbox();
     pop();
   }
@@ -75,7 +75,7 @@ function weapons(){
   push();
   translate(-100,0);
   if (boxfill = 2){
-    //m = 1000
+    m = 1000
     weaponbox();
     pop();
   }
@@ -90,7 +90,7 @@ function weapons(){
   push();
   if (boxfill==3){
     translate(-200,0);
-    //let m = 1000;
+    m = 1000;
     weaponbox();
     pop();
   }
@@ -105,7 +105,7 @@ function weapons(){
   push();
   if (boxfill ==4){
     translate(-300,0);
-    //let m = 1000;
+    m = 1000;
     weaponbox();
     pop();
   }
