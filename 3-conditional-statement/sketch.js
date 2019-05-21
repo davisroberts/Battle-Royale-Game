@@ -21,17 +21,19 @@ function setup() {
 }
 
 function keyPressed(){
-  if (keyCode === 1);{
-    let boxfill = 1;
-  }
-  else if (keyCode === 2) {
-    let boxfill = 2;
-  }
-  else if (keyCode === 3) {
-    let boxfill = 3;
-  }
-  else if (keyCode === 4) {
-    let boxfill = 4;
+  if (frameCount % 5 == 0) {
+    if (keyCode === 49){
+    boxfill = 1;
+    }
+    else if (keyCode === 50){
+      boxfill = 2;
+    }
+    else if (keyCode === 51){
+      boxfill = 3;
+    }
+    else if (keyCode === 52){
+      boxfill = 4;
+    }
   }
 }
 
@@ -57,7 +59,7 @@ function weapons(){
 
   push();
   if (boxfill==1){
-    let m = 1000
+    //m = 1000
     weaponbox();
     pop();
   }
@@ -71,7 +73,7 @@ function weapons(){
   push();
   translate(-100,0);
   if (boxfill = 2){
-    let m = 1000
+    //m = 1000
     weaponbox();
     pop();
   }
@@ -86,7 +88,7 @@ function weapons(){
   push();
   if (boxfill==3){
     translate(-200,0);
-    let m = 1000
+    //let m = 1000;
     weaponbox();
     pop();
   }
@@ -101,13 +103,14 @@ function weapons(){
   push();
   if (boxfill ==4){
     translate(-300,0);
+    //let m = 1000;
     weaponbox();
     pop();
   }
 
   else{
     push();
-    translate(-400,0);
+    translate(-300,0);
     weaponbox();
     pop();
   }
@@ -116,6 +119,7 @@ function weapons(){
 
 
 function weaponbox(){
+  noFill(),
   strokeWeight(10);
   rect(1390, 690, 100, 100);
   fill(11, 36, 251, m);
