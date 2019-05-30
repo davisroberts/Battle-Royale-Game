@@ -3,6 +3,10 @@ let balls = [];
 let me;
 let m = 0;
 let boxfill = 0;
+let checkright;
+let checkleft;
+let checkup;
+let checkdown;
 
 function preload(){
   img = loadImage('lorenzodavisshotgun.png');
@@ -17,6 +21,11 @@ function setup() {
 }
 
 function draw(){
+  checkright = get(me.x + 16, me.y);
+  checkleft = get(me.x - 16, me.y);
+  checkdown = get(me.x, me.y + 16);
+  checkup = get(me.x, me.y - 16);
+  // print(c);
 	background(141, 172, 221)
 
 noStroke();
@@ -226,11 +235,15 @@ class Avatar {
 
 	moveMe(){
     if (keyIsDown(UP_ARROW)) { //if you hold the up arrow, move up by speed
-       this.y -= this.speed;
+        if (checkup[0]>10){
+          this.y -= this.speed;
+        }
     }
 
     if (keyIsDown(DOWN_ARROW)) { // if you hold the down arrow, move down by speed
+      if (checkdown[0]>10){
         this.y += this.speed;
+      }
     }
     if (keyIsDown(LEFT_ARROW)) { //if you hold the up arrow, move up by speed
        this.x -= this.speed;
@@ -241,3 +254,4 @@ class Avatar {
     }
 	}
 
+}
