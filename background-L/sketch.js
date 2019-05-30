@@ -1,3 +1,4 @@
+var health = 100
 
 function setup() {
   createCanvas(1500,800);
@@ -6,36 +7,13 @@ function setup() {
 function draw(){
 	background(141, 172, 221)
 
-
 noStroke();
   fill(255);
   rect(0, 0, 75, 20);
 
   //text showing mouse coordinates
   fill(255, 0, 0);
-  text("("+mouseX + ", " + mouseY+")", 5, 15);
-
-fill("white")
-ellipse(750,400,700);
-fill("black")
-//top right obstacles
-rect(500, 200, 55, 10);
-rect(550, 150, 250, 10);
-function setup() {
-  createCanvas(1500,800);
-}
-
-function draw(){
-	background(141, 172, 221)
-fill(0)
-
-
-noStroke();
-  fill(255);
-  rect(0, 0, 75, 20);
-
-  //text showing mouse coordinates
-  fill(255, 0, 0);
+textSize(15)
   text("("+mouseX + ", " + mouseY+")", 5, 15);
 
 fill("white")
@@ -65,11 +43,10 @@ rect(530, 460, 35, 35);
 fill("black");
 text(("E"), 545, 532)
 
-}
 
 rect(760, 160, 10,150);
 rect(660, 260, 10,100)
-rect(670, 360, 80,10)
+rect(660, 360, 80,10)
 rect(545, 200, 10,150)
 ellipse(900,500,70,70)
 ellipse(1000,350,170,170)
@@ -106,20 +83,24 @@ text(("E"),1015, 552)
 text(("E"),867, 340)
 
 fill("silver")
-ellipse(470,390,40,40)
-ellipse(612,210,40,40)
-ellipse(900,210,40,40)
-ellipse(630,670,40,40)
-ellipse(900,630,40,40)
+ellipse(500,300,40,40)
+ellipse(800,110,40,40)
+ellipse(730,666,40,40)
+ellipse(1000,480,40,40)
 
 
-fill("red")
-rect(725,400,50,50)
-fill("white")
-text(("Space"), 732,430)
 
-fill(0)
+
+
+
+
   line(mouseX, 0, mouseX, 800);
    line(0, mouseY, 1500, mouseY);
-
+}
+//no clue how to fix this
+function keyPressed() {
+  if (keyCode === (69)) {
+    health = (health - 1);
+    print(health)
+}
 }
