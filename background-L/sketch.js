@@ -246,11 +246,15 @@ class Avatar {
       }
     }
     if (keyIsDown(LEFT_ARROW)) { //if you hold the up arrow, move up by speed
+      if (checkleft[0]>10){
        this.x -= this.speed;
+      }
     }
 
     if (keyIsDown(RIGHT_ARROW)) { // if you hold the down arrow, move down by speed
+      if (checkright[0]>10){
         this.x += this.speed;
+      }
     }
 	}
 
