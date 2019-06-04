@@ -7,6 +7,7 @@ let checkright;
 let checkleft;
 let checkup;
 let checkdown;
+let kyler;
 
 function preload(){
   img = loadImage('lorenzodavisshotgun.png');
@@ -52,9 +53,9 @@ rect(460, 405, 25, 25);
 rect(449, 550, 25, 25);
 rect(600, 375, 25, 25);
 //loot boxes
-stroke(0);
+stroke("orange");
 line(mouseX, 0, mouseX, 800);
- line(0, mouseY, 1500, mouseY);
+line(0, mouseY, 1500, mouseY);
 
 
 
@@ -257,5 +258,8 @@ class Avatar {
       }
     }
 	}
+class Bot {
 
+
+}
 }
