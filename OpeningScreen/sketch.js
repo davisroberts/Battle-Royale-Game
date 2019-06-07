@@ -1,12 +1,12 @@
 var button;
 function setup() {
   createCanvas(1500,800);
-  fill("green");
+
   button = createButton('P    L    A    Y');
   button.position(566,601);
   button.mousePressed(changeBG);
   button.size(299,99)
-
+button.mousePressed()
 }
 
 
@@ -30,7 +30,7 @@ textFont('Georgia')
 }
 
 function changeBG() {
-  var val = ("green");
+  var val = (255);
   background(val);
 
 
